@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.callor</groupId>
 	<artifactId>todo</artifactId>
-	<name>SpMVC_050_todoList</name>
+	<name>SpMVC_2022_250_SecurityV3_TodoListV2</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<dependencyManagement>
@@ -201,7 +201,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.2.1</version>
 				<configuration>
-					<mainClass>org.test.int1.Main</mainClass>
+					<mainClass>com.callor.todo</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

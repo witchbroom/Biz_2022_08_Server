@@ -32,7 +32,7 @@ public class UserVO implements UserDetails { // extends User {
 	private Collection<? extends GrantedAuthority> authorities; // getAuthorities
 
 	private String email;
-	private String phone;
+	private String tel;
 	private String address;
 	
 	private String realname;
