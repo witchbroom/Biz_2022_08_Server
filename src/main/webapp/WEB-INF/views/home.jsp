@@ -28,7 +28,7 @@
 	</sec:authorize>
 </div>
 
-<form:form class="todoview" action="${rootPath}/todo/todoview">
+<form:form class="todoview" action="${rootPath}/todolist">
 	<button>TODO 보기</button>
 </form:form>
 <form:form class="login" action="${rootPath}/user/login">

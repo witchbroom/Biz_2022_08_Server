@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.callor.todo.persistance.TodoDao">
+
+	<select id="selectAll" resultType="TodoVO">
+		SELECT * FROM tbl_todolist
+	</select>
+	<select id="findById" resultType="TodoVO">
+		SELECT * FROM tbl_todolist
+		WHERE t_seq = #{t_seq}
+	</select>
+	<insert id="insert" parameterType="TodoVO">
+		INSERT INTO tbl_todolist(
+		 t_sdate, t_stime,
+		t_content, t_edate, t_etime
+		) VALUES (
+		#{t_sdate}, #{t_stime},
+		#{t_content}, #{t_edate},
+		#{t_etime}
+		)
+	</insert>
+
+	<update id="update">
+	</update>
+	<delete id="delete">
+		DELETE FROM tbl_todolist
+		WHERE t_seq = #{t_seq}
+	</delete>
+
+	<select id="create_todo_table">
+		CREATE TABLE IF NOT EXISTS tbl_todolist(
+		t_seq BIGINT AUTO_INCREMENT PRIMARY KEY,
+		t_sdate VARCHAR(50),
+		t_stime VARCHAR(50),
+		t_content VARCHAR(100),
+		t_edate VARCHAR(50),
+		t_etime VARCHAR(50)
+		)
+	</select>
+
+
+</mapper> 

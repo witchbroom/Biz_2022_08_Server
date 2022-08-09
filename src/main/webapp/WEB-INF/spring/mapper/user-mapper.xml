@@ -18,11 +18,6 @@
 		SELECT * FROM tbl_authorities WHERE username = #{username}
 	</select>
 
-	<!-- 할일 정보 불러오기 -->
-	<select id="select_todos" resultType="TodoVO">
-		SELECT * FROM tbl_todolist WHERE t_seq = #{t_seq}
-	</select>
-
 	<insert id="insert" parameterType="UserVO">
 		INSERT INTO tbl_users(
 		username, password, enabled,
@@ -66,17 +61,6 @@
 		PRIMARY KEY,
 		username VARCHAR(20),
 		authority VARCHAR(20)
-		)
-	</select>
-
-	<select id="create_todo_table">
-		CREATE TABLE IF NOT EXISTS tbl_tudolist(
-			t_seq	BIGINT	AUTO_INCREMENT	PRIMARY KEY,
-			t_sdate	VARCHAR(50),
-			t_stime	VARCHAR(50),
-			t_content	 VARCHAR(100),
-			t_edate	VARCHAR(50),
-			t_etime	VARCHAR(50)
 		)
 	</select>
 
